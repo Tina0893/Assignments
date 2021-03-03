@@ -5,7 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 
-class TestWorkWeixin:
+class TestWework:
     def setup(self):
         # self.driver = webdriver.Chrome()
         # self.driver.implicitly_wait(5)
@@ -35,19 +35,19 @@ class TestWorkWeixin:
         self.driver.find_element(By.XPATH, "//*[@id='menu_profile']").click()
 
     # 使用cookie进行登录
-    def test_login_with_cookies(self):
-        # 存入cookie
-        cookies = self.driver.get_cookies()
-        with open("./temp.txt", "w", encoding="utf-8") as f:
-            f.write(json.dumps(cookies))
-            print(cookies)
-
-        self.driver.get("https://work.weixin.qq.com/wework_admin/frame#index")
-
-        # 读取cookie
-        with open("./temp.txt", "r", encoding="utf-8") as f:
-            cookies = json.loads(f.read())
-        for i in cookies:
-            self.driver.add_cookie(i)
-        self.driver.refresh()
-        sleep(5)
+    # def test_login_with_cookies(self):
+    #     # 存入cookie
+    #     cookies = self.driver.get_cookies()
+    #     with open("./temp.txt", "w", encoding="utf-8") as f:
+    #         f.write(json.dumps(cookies))
+    #         print(cookies)
+    #
+    #     self.driver.get("https://work.weixin.qq.com/wework_admin/frame#index")
+    #
+    #     # 读取cookie
+    #     with open("./temp.txt", "r", encoding="utf-8") as f:
+    #         cookies = json.loads(f.read())
+    #     for i in cookies:
+    #         self.driver.add_cookie(i)
+    #     self.driver.refresh()
+    #     sleep(5)
