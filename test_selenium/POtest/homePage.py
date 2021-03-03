@@ -1,2 +1,0 @@
-class homePage:
-    def
