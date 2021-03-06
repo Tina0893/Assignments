@@ -6,6 +6,7 @@ from appium import webdriver
 
 
 class TestWeworkDemo:
+
     def setup(self):
         caps = {}
         caps["platformName"] = "Android"
@@ -25,5 +26,9 @@ class TestWeworkDemo:
         el2 = self.driver.find_element_by_id("com.tencent.wework:id/gpg")
         el2.send_keys("客服")
         el3 = self.driver.find_element_by_xpath(
-            "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.RelativeLayout[4]/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout")
+            "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/\
+            android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/\
+            android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.ListView/\
+            android.widget.RelativeLayout[4]/android.widget.RelativeLayout/\
+            android.widget.RelativeLayout/android.widget.RelativeLayout")
         el3.click()
